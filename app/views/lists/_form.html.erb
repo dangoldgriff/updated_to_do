@@ -1,0 +1,16 @@
+<% if @list.errors.any? %>
+  <h3>Please correct these problems:</h3>
+    <ul>
+      <% @list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<div class="input-append">
+  <%= form_for @list do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit :class => 'btn' %>
+  <% end %>  
+</div>

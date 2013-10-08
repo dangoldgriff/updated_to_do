@@ -1,0 +1,15 @@
+<br>
+<div class="top">
+  <h1>Welcome to the Oregonizer:</h1>
+  <h6>A handy dandy task organizer that includes multiple lists, levels of completion, and due dates.</h6>
+  <p>Brought to you by <a href="http://www.linkedin.com/in/danielggriffin" target="_blank">Dan Griffin</a>.</p>
+</div>
+<hr>
+<p><%= link_to 'Create a new list', new_list_path(@list), :class => 'btn btn-primary' %> </p>
+<br>
+<ul>
+  <% @lists.each do |list| %>
+    <li class="link"><%= link_to list.name, list %></li>
+  <% end %>
+</ul>
+
