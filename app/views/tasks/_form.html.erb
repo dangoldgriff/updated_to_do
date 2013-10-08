@@ -12,9 +12,10 @@
 <%= form_for @task do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description %>
-  <%= f.select :completed, [["Incomplete", false ],["Complete", true ]] %>
+  <%= f.select :completed, [["Incomplete", false ],["Complete", true ]]%>
   <%= f.label :duedate %>
   <%= f.text_field :duedate %>
   <%= f.hidden_field :list_id %>
-  <%= f.submit %>
+  <%= f.submit 'Update Item', :class => 'btn btn-success' %>
 <% end %>  
+</div>

@@ -1,8 +1,9 @@
 <h1>Edit <%= @task.description %></h1>
 <hr>
-
+<div>
 <%= render 'form' %>
-<p><%= link_to 'Delete this task',
+<p><%= link_to 'Delete this item',
                 @task,
                 :method => :delete,
                 :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-primary' %></p>
+</div>
