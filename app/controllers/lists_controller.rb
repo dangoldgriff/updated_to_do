@@ -40,7 +40,7 @@ class ListsController < ApplicationController
   def destroy
     @list = List.find(params[:id])
     @list.destroy
-    flash[:notice] = "List deleted"
+    flash[:notice] = "list deleted"
     redirect_to lists_path
   end  
        

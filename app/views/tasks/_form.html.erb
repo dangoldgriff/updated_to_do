@@ -8,13 +8,13 @@
 <% end %>
 
 <div class="input-append">
+
 <%= form_for @task do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description %>
   <%= f.select :completed, [["Incomplete", false ],["Complete", true ]] %>
-  <%= f.label 'Due date' %>
+  <%= f.label :duedate %>
   <%= f.text_field :duedate %>
   <%= f.hidden_field :list_id %>
-  <%= f.submit :class => 'btn'%>
+  <%= f.submit %>
 <% end %>  
-</div>
