@@ -2,6 +2,9 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
+    @lists = List.where(:user_id => current_user)
+    # @user = User.find(current_user.id)
+    # @lists = current_user.lists
   end
 
   def show
@@ -10,7 +13,12 @@ class ListsController < ApplicationController
   end
 
   def new
-    @list = List.new(:name => params[:id])
+    if @user = current_user 
+      @list = List.new(:user_id => current_user.id)
+    else
+      flash[:alert] = "Why you no have user account?! ლ(ಠ益ಠლ) Please make one."
+    redirect_to :root
+    end
   end
 
   def create
@@ -49,6 +57,6 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :user_id)
   end    
 end    

@@ -1,11 +1,13 @@
 <br>
-<div class="top">
-  <h1>Welcome to the Oregonizer:</h1>
-  <h6>A handy dandy task organizer that includes multiple lists, levels of completion, and due dates.</h6>
-  <p>Brought to you by <a href="http://www.linkedin.com/in/danielggriffin" target="_blank">Dan Griffin</a>.</p>
+<div class= "container">
+  <div class="top">
+   <h1>Welcome to the Oregonizer:</h1>
+   <h6>A handy dandy task organizer that includes multiple lists, levels of completion, and due dates.</h6>
+   <p>Brought to you by <a href="http://www.linkedin.com/in/danielggriffin" target="_blank">Dan Griffin</a> in collaboration with <a href="http://www.linkedin.com/pub/corbin-dahl/23/694/7a2" target="_blank">Corbin Dahl</a> and <a href="http://www.jasonrodriguez.net/" target="_blank">Jason Rodriguez</a>.</p>
+  </div>
 </div>
 <hr>
-<p><%= link_to 'Create a new list', new_list_path(@list), :class => 'btn btn-primary' %> </p>
+<p><%= link_to 'Create a new list', new_list_path, :class => 'btn btn-primary' %> </p>
 <br>
 <ul>
   <% @lists.each do |list| %>

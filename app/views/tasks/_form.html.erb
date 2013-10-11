@@ -14,7 +14,7 @@
   <%= f.text_field :description %>
   <%= f.select :completed, [["Incomplete", false ],["Complete", true ]]%>
   <%= f.label :duedate %>
-  <%= f.text_field :duedate %>
+  <%= f.text_field :duedate, :placeholder => 'DD/MM/YYYY' %>
   <%= f.hidden_field :list_id %>
   <%= f.submit 'Update Item', :class => 'btn btn-success' %>
 <% end %>  
